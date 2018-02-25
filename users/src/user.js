@@ -12,6 +12,14 @@ const UserSchema = new Schema ({
     },
     required:[true, 'Name is Required.']
      },
+  lastname: {
+    type:String,
+    validate:{
+      validator:(name) => name.length >2,
+      message:'Name must be longer than 2 characters.'
+    },
+    required:[true, 'LastName is Required.']
+     },
    postCount:{
      type:Number
    },
